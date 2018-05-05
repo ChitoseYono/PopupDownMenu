@@ -1,11 +1,11 @@
-package come.example.chitose.popuplibrary.utils;
+package com.example.chitose.popuplibrary.utils;
 
-import come.example.chitose.popuplibrary.entity.PopItem;
+import com.example.chitose.popuplibrary.entity.PopItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static come.example.chitose.popuplibrary.utils.StaticUtils.*;
+import static com.example.chitose.popuplibrary.utils.StaticUtils.*;
 
 
 /**

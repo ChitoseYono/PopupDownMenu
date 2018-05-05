@@ -1,4 +1,4 @@
-package come.example.chitose.popuplibrary.adapter;
+package com.example.chitose.popuplibrary.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import come.example.chitose.popuplibrary.R;
-import come.example.chitose.popuplibrary.entity.PopItem;
+import com.example.chitose.popuplibrary.R;
+import com.example.chitose.popuplibrary.entity.PopItem;
 
 import java.util.List;
 

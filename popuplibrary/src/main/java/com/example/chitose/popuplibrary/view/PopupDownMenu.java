@@ -1,31 +1,30 @@
-package come.example.chitose.popuplibrary.view;
+package com.example.chitose.popuplibrary.view;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
-import come.example.chitose.popuplibrary.adapter.PopAdapter;
-import come.example.chitose.popuplibrary.entity.PopItem;
-import come.example.chitose.popuplibrary.utils.PopupUtils;
+import com.example.chitose.popuplibrary.adapter.PopAdapter;
+import com.example.chitose.popuplibrary.entity.PopItem;
+import com.example.chitose.popuplibrary.utils.PopupUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static come.example.chitose.popuplibrary.utils.StaticUtils.*;
+import static com.example.chitose.popuplibrary.utils.StaticUtils.*;
 /**
- * 文件名：PopupMaker.java
+ * 文件名：PopupDownMenu.java
  * 类型：PopupWindow的包装类
  * 作用：包装了PopupWindow，转换数据类型进以加载进列表中
  * Created by Chitose on 2018/4/30.
  */
 
-public class PopupMaker {
+public class PopupDownMenu {
 
     private Context mContext;
 
@@ -56,7 +55,7 @@ public class PopupMaker {
 
 
     //仅一级时的下拉列表菜单栏
-    public PopupMaker(Context mContext, final List<PopItem> itemList, int height, View view, Drawable drawable, ListView ... listViews) {
+    public PopupDownMenu(Context mContext, final List<PopItem> itemList, int width, int height, View view, Drawable drawable, ListView ... listViews) {
 
         this.mContext = mContext;
         this.itemList = itemList;
@@ -106,7 +105,7 @@ public class PopupMaker {
         }
 
         //初始化PopupWindow
-        popupWindow = new PopupWindow(view, WindowManager.LayoutParams.MATCH_PARENT, height, true);
+        popupWindow = new PopupWindow(view, width, height, true);
         popupWindow.setBackgroundDrawable(drawable);
     }
 

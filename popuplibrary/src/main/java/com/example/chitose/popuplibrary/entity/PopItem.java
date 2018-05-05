@@ -1,4 +1,4 @@
-package come.example.chitose.popuplibrary.entity;
+package com.example.chitose.popuplibrary.entity;
 
 /**
  * 文件：PopItem.java

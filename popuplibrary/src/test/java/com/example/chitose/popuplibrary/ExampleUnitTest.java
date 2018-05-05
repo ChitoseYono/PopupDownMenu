@@ -1,4 +1,4 @@
-package come.example.chitose.popuplibrary;
+package com.example.chitose.popuplibrary;
 
 import org.junit.Test;
 

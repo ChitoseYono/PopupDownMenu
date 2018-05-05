@@ -4,10 +4,10 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ListView;
@@ -15,9 +15,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chitose.popupdemo.adapter.PopAdapter;
-import com.example.chitose.popupdemo.utils.PopupUtils;
-import com.example.chitose.popupdemo.view.PopupMaker;
+import com.example.chitose.popupdemo.view.PopupDownMenu;
 import com.example.chitose.popupdemo.entity.PopItem;
 
 import java.util.ArrayList;
@@ -50,9 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Animation animOut;
 
     //PopupTree的定义
-    private PopupMaker p1;
-    private PopupMaker p2;
-    private PopupMaker p3;
+    private PopupDownMenu p1;
+    private PopupDownMenu p2;
+    private PopupDownMenu p3;
 
     View view;
     ListView firstListView;
@@ -96,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         view = LayoutInflater.from(this).inflate(R.layout.popup_one_layout, null);
         firstListView = view.findViewById(R.id.pop_listview);
 
-        p1 = new PopupMaker(this, itemList,375, view, drawable, firstListView);
+        p1 = new PopupDownMenu(this, itemList, WindowManager.LayoutParams.MATCH_PARENT,375, view, drawable, firstListView);
         p1.popupWindow.setFocusable(false);
         p1.popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
@@ -123,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firstListView = view.findViewById(R.id.pop_listview_left);
         secondListView = view.findViewById(R.id.pop_listview_right);
 
-        p2 = new PopupMaker(this, itemList2,375, view, drawable, firstListView, secondListView);
+        p2 = new PopupDownMenu(this, itemList2, WindowManager.LayoutParams.MATCH_PARENT,375, view, drawable, firstListView, secondListView);
         p2.popupWindow.setFocusable(false);
         p2.popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
@@ -155,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         secondListView = view.findViewById(R.id.pop_listview_center);
         thirdListView = view.findViewById(R.id.pop_listview_right);
 
-        p3 = new PopupMaker(this, itemList3,375, view, drawable, firstListView, secondListView, thirdListView);
+        p3 = new PopupDownMenu(this, itemList3, WindowManager.LayoutParams.MATCH_PARENT,375, view, drawable, firstListView, secondListView, thirdListView);
         p3.popupWindow.setFocusable(false);
         p3.popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override

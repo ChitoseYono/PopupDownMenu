@@ -22,13 +22,13 @@ import java.util.List;
 import static com.example.chitose.popupdemo.utils.StaticUtils.*;
 
 /**
- * 文件名：PopupMaker.java
+ *
  * 类型：PopupWindow的包装类
  * 作用：包装了PopupWindow，转换数据类型进以加载进列表中
  * Created by Chitose on 2018/4/30.
  */
 
-public class PopupMaker {
+public class PopupDownMenu {
 
     private Context mContext;
 
@@ -59,7 +59,7 @@ public class PopupMaker {
 
 
     //仅一级时的下拉列表菜单栏
-    public PopupMaker(Context mContext, final List<PopItem> itemList, int height, View view, Drawable drawable, ListView ... listViews) {
+    public PopupDownMenu(Context mContext, final List<PopItem> itemList, int width, int height, View view, Drawable drawable, ListView ... listViews) {
 
         this.mContext = mContext;
         this.itemList = itemList;
@@ -109,7 +109,7 @@ public class PopupMaker {
         }
 
         //初始化PopupWindow
-        popupWindow = new PopupWindow(view, WindowManager.LayoutParams.MATCH_PARENT, height, true);
+        popupWindow = new PopupWindow(view, width, height, true);
         popupWindow.setBackgroundDrawable(drawable);
     }
 

@@ -1,4 +1,4 @@
-package come.example.chitose.popuplibrary.utils;
+package com.example.chitose.popuplibrary.utils;
 
 /**
  * 文件名：StaticUtils.java
