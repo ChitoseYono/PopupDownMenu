@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    >
+
+    <ListView
+        android:id="@+id/pop_listview_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="0.5dp"
+        android:divider="#e2e2e2"
+        android:scrollbars="none"
+
+        android:scrollingCache="false"
+        />
+    <!--android:listSelector="#efefef"-->
+
+    <ListView
+        android:id="@+id/pop_listview_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:background="#efefef"
+        android:dividerHeight="0.5dp"
+        android:divider="#c6c6c6"
+
+        android:scrollingCache="false"/>
+    <!--android:listSelector="#e2e2e2"-->
+
+    <ListView
+        android:id="@+id/pop_listview_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:background="#e2e2e2"
+
+        android:dividerHeight="0.5dp"
+        android:divider="#c6c6c6"
+        android:scrollingCache="false"/>
+    <!--android:listSelector="#d7d7d7"-->
+
+</LinearLayout>

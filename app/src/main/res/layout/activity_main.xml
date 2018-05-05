@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6D6D6"
+    android:orientation="vertical"
+    android:id="@+id/full"
+    tools:context="com.example.chitose.popupdemo.MainActivity">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_demo"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="36dp"
+        android:padding="5dp"
+        android:text="ONE"
+        android:drawableRight="@drawable/tv_bg"
+        android:background="@android:color/white"
+        android:drawableEnd="@drawable/tv_bg" />
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_demo2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="36dp"
+        android:padding="5dp"
+        android:text="DOUBLE"
+        android:drawableRight="@drawable/tv_bg"
+        android:background="@android:color/white"
+        android:drawableEnd="@drawable/tv_bg" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_demo3"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="36dp"
+        android:padding="5dp"
+        android:text="TRIPLE"
+        android:drawableRight="@drawable/tv_bg"
+        android:background="@android:color/white"
+        android:drawableEnd="@drawable/tv_bg" />
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#b4b4b4"/>
+
+    <View
+        android:id="@+id/main_darkview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9b9b9b"
+        android:visibility="gone"/>
+
+</LinearLayout>
