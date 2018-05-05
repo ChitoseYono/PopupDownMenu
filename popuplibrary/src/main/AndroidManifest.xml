@@ -1,2 +1,1 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="come.example.chitose.popuplibrary" />
+<manifest package="come.example.chitose.popuplibrary" />

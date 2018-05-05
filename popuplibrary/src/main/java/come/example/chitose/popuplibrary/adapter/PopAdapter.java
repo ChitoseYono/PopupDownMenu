@@ -23,6 +23,7 @@ public class PopAdapter extends BaseAdapter {
 
     private Context mContext;
     private List<PopItem> mList;
+    //记录选择位置
     private int selectedPosition;
 
     public PopAdapter(Context mContext, List<PopItem> mList) {

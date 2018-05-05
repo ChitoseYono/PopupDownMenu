@@ -180,13 +180,7 @@ public class PopupMaker {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                //选了第二列元素后第一列选值必定指向已选第二列元素的父节点元素
-//                for(PopItem item : popList.get(0)){
-//                    if(item.getId()==mList.get(position).getPid()) {
-//                        results[0] = item.getContent();
-//                        break;
-//                    }
-//                }
+
                 results[0] = itemList.get(mList.get(position).getPid()-1).getContent();
                 secondAdapter.setSelectedPosition(position);
                 //选择了第二列元素相应的数据放到result[1]中
@@ -214,7 +208,6 @@ public class PopupMaker {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 firstAdapter.setSelectedPosition(position);
                 //选择了第一列元素相应的数据放到result[0]中
-//                results[0] = popList.get(0).get(position).getContent();
                 results[0] = popList.get(0).get(position).getContent();
 
                 //尝试获取当前第一列选项的二级数据
@@ -254,13 +247,7 @@ public class PopupMaker {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 secondAdapter.setSelectedPosition(position);
-                //选了第二列元素后第一列选值必定指向已选第二列元素的父节点元素
-//                for(PopItem item : popList.get(0)){
-//                    if(item.getId()==mList.get(position).getPid()) {
-//                        results[0] = item.getContent();
-//                        break;
-//                    }
-//                }
+
                 results[0] = itemList.get(mList.get(position).getPid()-1).getContent();
 
                 //选择了第二列元素相应的数据放到result[1]中
@@ -296,24 +283,9 @@ public class PopupMaker {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 thirdAdapter.setSelectedPosition(position);
-                //选了第三列元素后第二列选值必定指向已选第三列元素的父节点元素
-//                PopItem temp = null;
-//                for(PopItem item : mList){
-//                    if(item.getId()==mList2.get(position).getPid()) {
-//                        results[1] = item.getContent();
-//                        temp=item;
-//                        break;
-//                    }
-//                }
+
                 results[1] = itemList.get(mList2.get(position).getPid()-1).getContent();
-                
-                //第一列选值必定指向已选第二列元素的父节点元素
-//                for(PopItem item : popList.get(0)){
-//                    if(item.getId()==temp.getPid()) {
-//                        results[0] = item.getContent();
-//                        break;
-//                    }
-//                }
+
                 results[0] = itemList.get(itemList.get(mList2.get(position).getPid()-1).getPid()-1).getContent();
 
                 //选择了第三列元素相应的数据放到result[2]中

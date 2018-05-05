@@ -11,7 +11,7 @@ public class StaticUtils {
 
     private StaticUtils() {}
 
-    //用于辨别菜单类型
+    //用于辨别菜单的类型
     public static final int ONLY_ONE_POP = 100001;
     public static final int DOUBLE_POP = 100002;
     public static final int TRIPLE_POP = 100003;

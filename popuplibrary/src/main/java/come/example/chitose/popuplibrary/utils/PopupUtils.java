@@ -46,32 +46,6 @@ public class PopupUtils {
 
     }
 
-/*    public static int popSort(List<List<PopItem>> popList) {
-
-        boolean doubleFlag = false;
-
-        for(int i = 1; i<popList.size();i++){
-            if(popList.get(i).size()!=0){
-                for(PopItem item: popList.get(i)){
-                    if(popList.get(item.getId()).size()!=0){
-                        return TRIPLE_POP;
-                    }
-                    else{
-                        doubleFlag = true;
-                    }
-                }
-            }
-        }
-        //二级菜单栏
-        if(doubleFlag){
-            return DOUBLE_POP;
-        }
-        //一级菜单栏
-        else{
-            return ONLY_ONE_POP;
-        }
-    }*/
-
     public static void popListInit(List<List<PopItem>> popList, List<PopItem> itemList){
         //secondList.get(0)只装载第一列的元素，那么能方便以后的get可以直接get对应PopItem的id作为索引
         popList.add(new ArrayList<PopItem>());

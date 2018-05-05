@@ -8,6 +8,7 @@ package come.example.chitose.popuplibrary.entity;
  */
 
 public class PopItem {
+
     private int id;
     private int pid;
     private String content;
