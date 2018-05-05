@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initPop() {
-        //三个popupWindow的初始化
+        //三个popupWindow的背景
         Drawable drawable = ContextCompat.getDrawable(this, R.drawable.bg_filter_down);
 
         //初始化PopupWindow中的ListView
@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firstListView = view.findViewById(R.id.pop_listview);
 
         p1 = new PopupDownMenu(this, itemList, WindowManager.LayoutParams.MATCH_PARENT,375, view, drawable, firstListView);
-        p1.popupWindow.setFocusable(false);
         p1.popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
@@ -122,7 +121,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         secondListView = view.findViewById(R.id.pop_listview_right);
 
         p2 = new PopupDownMenu(this, itemList2, WindowManager.LayoutParams.MATCH_PARENT,375, view, drawable, firstListView, secondListView);
-        p2.popupWindow.setFocusable(false);
         p2.popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
@@ -154,7 +152,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         thirdListView = view.findViewById(R.id.pop_listview_right);
 
         p3 = new PopupDownMenu(this, itemList3, WindowManager.LayoutParams.MATCH_PARENT,375, view, drawable, firstListView, secondListView, thirdListView);
-        p3.popupWindow.setFocusable(false);
         p3.popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {

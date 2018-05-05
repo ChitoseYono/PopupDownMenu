@@ -110,6 +110,7 @@ public class PopupDownMenu {
 
         //初始化PopupWindow
         popupWindow = new PopupWindow(view, width, height, true);
+        popupWindow.setFocusable(false);
         popupWindow.setBackgroundDrawable(drawable);
     }
 
