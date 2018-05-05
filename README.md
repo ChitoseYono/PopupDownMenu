@@ -7,9 +7,7 @@ PopupDownMenu = PopupWindow+ListView
 
 ## 2、直接看预览图
 
-
-
-
+![IMAGE_PRE](/GIF.gif)
 
 
 ## 3、使用方法
@@ -33,8 +31,8 @@ PopupDownMenu = PopupWindow+ListView
 ### 3.2布局文件
 以单单一个三级菜单为例，需要一个有三个ListView的布局文件：
 
-  <?xml version="1.0" encoding="utf-8"?>  
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    <?xml version="1.0" encoding="utf-8"?>  
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
       android:layout_width="match_parent"  
       android:layout_height="match_parent"  
       android:orientation="horizontal"  
@@ -221,7 +219,6 @@ PopupDownMenu = PopupWindow+ListView
 
 就ojbk了（这个我本来不太想的，因为应该都知道怎么做的吧）
 总之！到此就能实现预览图的效果了！
-
 
 
 ## 5、其他事项
