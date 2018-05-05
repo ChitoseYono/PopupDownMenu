@@ -47,15 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Animation animIn;
     private Animation animOut;
 
-    //PopupTree的定义
+    //PopupDownMenu的定义
     private PopupDownMenu p1;
     private PopupDownMenu p2;
     private PopupDownMenu p3;
-
-    View view;
-    ListView firstListView;
-    ListView secondListView;
-    ListView thirdListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,10 +78,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         darkView.startAnimation(animIn);
         darkView.setVisibility(View.GONE);
 
-
     }
 
     private void initPop() {
+
+        View view;
+        ListView firstListView;
+        ListView secondListView;
+        ListView thirdListView;
+
         //三个popupWindow的背景
         Drawable drawable = ContextCompat.getDrawable(this, R.drawable.bg_filter_down);
 
@@ -107,10 +107,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(p1.results[3]!=null) {
                     if (p1.results[0] != null) {
                         tv_demo.setText(p1.results[0]);
-                        Toast.makeText(MainActivity.this, p1.results[0], Toast.LENGTH_SHORT).show();
                     }
+                    Toast.makeText(MainActivity.this, p1.results[0], Toast.LENGTH_SHORT).show();
                 }
-                p1.results[3]=null;
                 tv_demo.setSelected(false);
             }
         });
@@ -137,10 +136,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } else {
                             tv_demo2.setText(p2.results[0]);
                         }
-                        Toast.makeText(MainActivity.this, p2.results[0] + "+" + p2.results[1], Toast.LENGTH_SHORT).show();
                     }
+                    Toast.makeText(MainActivity.this, p2.results[0] + "+" + p2.results[1], Toast.LENGTH_SHORT).show();
                 }
-                p2.results[3]=null;
                 tv_demo2.setSelected(false);
             }
         });
@@ -172,10 +170,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         } else {
                             tv_demo3.setText(p3.results[0]);
                         }
-                        Toast.makeText(MainActivity.this, p3.results[0] + "+" + p3.results[1] + "+" + p3.results[2], Toast.LENGTH_SHORT).show();
                     }
+                    Toast.makeText(MainActivity.this, p3.results[0] + "+" + p3.results[1] + "+" + p3.results[2], Toast.LENGTH_SHORT).show();
                 }
-                p3.results[3]=null;
                 tv_demo3.setSelected(false);
             }
         });

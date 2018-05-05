@@ -121,6 +121,7 @@ public class PopupDownMenu {
         firstListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                results[3] = null;
                 firstAdapter.setSelectedPosition(position);
                 // 一级菜单的选择可以直接通过itemList设置结果放入result[0]中
 //                results[0] = popList.get(0).get(position).getContent();
@@ -146,6 +147,7 @@ public class PopupDownMenu {
         firstListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                results[3] = null;
 
                 firstAdapter.setSelectedPosition(position);
                 //选择了第一列元素相应的数据放到result[0]中
@@ -206,6 +208,7 @@ public class PopupDownMenu {
         firstListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                results[3] = null;
                 firstAdapter.setSelectedPosition(position);
                 //选择了第一列元素相应的数据放到result[0]中
                 results[0] = popList.get(0).get(position).getContent();
@@ -246,6 +249,7 @@ public class PopupDownMenu {
         secondListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                results[3] = null;
                 secondAdapter.setSelectedPosition(position);
 
                 results[0] = itemList.get(mList.get(position).getPid()-1).getContent();

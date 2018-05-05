@@ -152,6 +152,7 @@ public class PopupDownMenu {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 firstAdapter.setSelectedPosition(position);
+                results[3] = null;
                 //选择了第一列元素相应的数据放到result[0]中
 //                results[0] = itemList.get(position).getContent();
                 results[0] = popList.get(0).get(position).getContent();
@@ -216,6 +217,7 @@ public class PopupDownMenu {
         firstListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                results[3] = null;
                 firstAdapter.setSelectedPosition(position);
                 //选择了第一列元素相应的数据放到result[0]中
 //                results[0] = popList.get(0).get(position).getContent();
@@ -257,6 +259,7 @@ public class PopupDownMenu {
         secondListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                results[3] = null;
                 secondAdapter.setSelectedPosition(position);
                 //选了第二列元素后第一列选值必定指向已选第二列元素的父节点元素
 //                for(PopItem item : popList.get(0)){
