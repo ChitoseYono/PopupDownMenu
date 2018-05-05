@@ -7,7 +7,7 @@ PopupDownMenu = PopupWindow+ListView
 
 ## 2、直接看预览图
 
-![IMAGE_PRE](/GIF.gif)
+![IMAGE](https://img-blog.csdn.net/20180505170614305)
 
 
 ## 3、使用方法
@@ -231,6 +231,7 @@ PopupDownMenu = PopupWindow+ListView
 ### 2.对于ListView各项点击效果的自定义设置
 
 这个...也需要改Library中的文件了，直接改`res/item_selector`就可以了，放一张截图吧：
+![IMAGE](https://img-blog.csdn.net/20180505164146115)
 
 
 ### 3.其他一些话
