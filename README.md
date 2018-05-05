@@ -123,7 +123,8 @@ PopupDownMenu = PopupWindow+ListView
            if (p.results[3] != null) {  
                   Toast.makeText(MainActivity.this, p.results[0] + "+" + p.results[1] + "+" + p.results[2], Toast.LENGTH_SHORT).show();  
             }
-            });
+        }
+     });
   
 三级菜单就需要三个ListView，然后定义你需要的PopupDownMenu的宽和高，还要自定义一个drawable作为PopupDownMenu的背景。
 而数据的获得就需要通过PopupDownMenu中包装的popupWindow的OnDismiss中回调获得(备注：p.result[3]是数据正常输出标记，没有这个判定可能会导致数据缓存导致的异常而得到不理想的数据)
@@ -136,12 +137,12 @@ PopupDownMenu = PopupWindow+ListView
     @Override  
     public void onClick(View v) {  
     //判断是否popupWindow是否已经在显示，没显示就显示，显示就dismiss  
-    if (!p.popupWindow.isShowing()) {  
-        p.popupWindow.showAsDropDown(v,0,0);  
-    }  
-    else {  
-        p.popupWindow.dismiss();  
-    }  
+        if (!p.popupWindow.isShowing()) {  
+            p.popupWindow.showAsDropDown(v,0,0);  
+        }  
+        else {  
+            p.popupWindow.dismiss();  
+        }  
     }
     });  
   
@@ -152,8 +153,8 @@ PopupDownMenu = PopupWindow+ListView
 ## 4、用户体验的完善
 ### 4.1实现点击外部布局的popupWindow消失
 
-  @Override  
-  public boolean onTouchEvent(MotionEvent event) {  
+    @Override  
+    public boolean onTouchEvent(MotionEvent event) {  
 
       switch (event.getAction()) {  
           //点击按钮以外的布局时要把可能有的PopupWindow清除  
@@ -166,14 +167,14 @@ PopupDownMenu = PopupWindow+ListView
               break;  
       }  
       return true;  
-  }  
+    }  
 
 如果只是点击事件源的话不会触发这个，因为会被事件源的监听拦下，所以放心加上这个就可以了！
 
 ### 4.2变暗效果
 这个效果的话...我就有点投机取巧了。这里需要你们的Activity里的布局有一个DarkView布局，像这样
 
-  <View  
+    <View  
       android:id="@+id/main_darkview"  
       android:layout_width="match_parent"  
       android:layout_height="match_parent"  
@@ -216,10 +217,7 @@ PopupDownMenu = PopupWindow+ListView
 
 再在你的代码中对事件源的onClick和PopupDownWindow的onDismiss中分别加上
 
-`tv.setSelected(true);  `
-
-和
-`tv.setSelected(false);  `
+`tv.setSelected(true);  `和`tv.setSelected(false);  `
 
 就ojbk了（这个我本来不太想的，因为应该都知道怎么做的吧）
 总之！到此就能实现预览图的效果了！
