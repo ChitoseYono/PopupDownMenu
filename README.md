@@ -121,8 +121,10 @@ PopupDownMenu = PopupWindow+ListView
            if (p.results[3] != null) {  
                   Toast.makeText(MainActivity.this, p.results[0] + "+" + p.results[1] + "+" + p.results[2], Toast.LENGTH_SHORT).show();  
             }
-        }
-     });
+         }
+     });
+        
+
   
 三级菜单就需要三个ListView，然后定义你需要的PopupDownMenu的宽和高，还要自定义一个drawable作为PopupDownMenu的背景。
 而数据的获得就需要通过PopupDownMenu中包装的popupWindow的OnDismiss中回调获得(备注：p.result[3]是数据正常输出标记，没有这个判定可能会导致数据缓存导致的异常而得到不理想的数据)
