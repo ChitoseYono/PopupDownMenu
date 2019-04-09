@@ -240,10 +240,6 @@ PopupDownMenu = PopupWindow+ListView
 
 这也只是大概也就做了几天的一个小想法，像上面两点需要到依赖包里改文件这问题我会再想想怎么处理的，也可能存在没发现的Bug，或者设计很丑之类的问题，又或者设计理念上的更新，我都会注意处理的。
 
-总之，欢迎大家评论提出问题和使用上的其他问题，我会尽快回复！过一段时间我也会试着再写一篇blog说明是怎么做的。
-
-另外各位客官github求一波star、fork、issue三连啦。
-
 
 
 [我的博客](https://blog.csdn.net/chitoseyono "欢迎关注ChitoseYono的博客")
